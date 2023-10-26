@@ -16,4 +16,3 @@ jobs:
           echo ${{ github.repository }}
           echo ${{ env.OPEN }}
           echo ${{ vars.OPEN }}
-          echo ${{ $OPEN }}
