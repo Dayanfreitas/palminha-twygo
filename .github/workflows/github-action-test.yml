@@ -15,3 +15,4 @@ jobs:
           echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
           echo ${{ github.repository }}
           echo ${{ env.OPEN }}
+          echo ${{ var.OPEN }}
