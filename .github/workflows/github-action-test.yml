@@ -10,10 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: TESTE ENV
-        run: |
-          echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
-          echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
-          echo ${{ github.repository }}
-          echo "$OPEN"
         env:
           OPEN: ${{ vars.OPEN }}
+          REACT_APP_FIREBASE_TYPE: ${{ secrets.REACT_APP_FIREBASE_TYPE }}
+        run: |
+          echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
+          echo "$REACT_APP_FIREBASE_TYPE"
+          echo ${{ github.repository }}
+          echo "$OPEN"
+        
