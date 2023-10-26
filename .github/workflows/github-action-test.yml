@@ -1,0 +1,15 @@
+name: Github Action Test
+run-name: ${{ github.actor }} started GitHub Actions 🚀
+on:
+  push:
+    branches:
+      - feat/teste-build-main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: TESTE ENV
+        run: |
+          echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
+          echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
+   
