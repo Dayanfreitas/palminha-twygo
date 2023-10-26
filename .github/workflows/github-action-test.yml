@@ -14,5 +14,6 @@ jobs:
           echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
           echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
           echo ${{ github.repository }}
-          echo ${{ env.OPEN }}
-          echo ${{ vars.OPEN }}
+          echo "$OPEN"
+        env:
+          OPEN: ${{ vars.OPEN }}
