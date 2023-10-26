@@ -5,15 +5,13 @@ on:
     branches:
       - feat/test-build-main
 
-  # pull_request:
-  #   branches: 
-  #     - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: TESTE ENV
-      run: |
-        echo ${{ github.repository }}
-        echo ${{ env.OPEN }}
-
+        run: |
+          echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
+          echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
+          echo ${{ github.repository }}
+          echo ${{ env.OPEN }}
