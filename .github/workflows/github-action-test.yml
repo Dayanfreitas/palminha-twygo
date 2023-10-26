@@ -8,25 +8,12 @@ on:
   # pull_request:
   #   branches: 
   #     - main
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: TESTE ENV
-#         run: |
-#           echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
-#           echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
-#       env:
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    # run: |
-    #   npm install
-    #   git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-    #   npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
-    #   env:
-    #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    run: |
-      echo ${{ github.repository }}
-      echo ${{ env.OPEN }}
+    steps:
+      - name: TESTE ENV
+      run: |
+        echo ${{ github.repository }}
+        echo ${{ env.OPEN }}
+
