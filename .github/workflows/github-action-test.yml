@@ -1,15 +1,32 @@
 name: Github Action Test
-run-name: ${{ github.actor }} started GitHub Actions 🚀
+run-name: ${{ github.actor }} started Deploy with gh-pages 🚀
 on:
   push:
     branches:
       - feat/test-build-main
+
+  # pull_request:
+  #   branches: 
+  #     - main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: TESTE ENV
+#         run: |
+#           echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
+#           echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
+#       env:
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: TESTE ENV
-        run: |
-          echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
-          echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
-   
+    # run: |
+    #   npm install
+    #   git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+    #   npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+    #   env:
+    #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    run: |
+      echo ${{ github.repository }}
+      echo ${{ env.OPEN }}
