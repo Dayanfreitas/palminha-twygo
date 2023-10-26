@@ -1,5 +1,5 @@
 name: Github Action Test
-run-name: ${{ github.actor }} started Deploy with gh-pages 🚀
+run-name: ${{ github.actor }} - ${{ vars.OPEN }} - started Deploy with gh-pages 🚀
 on:
   push:
     branches:
