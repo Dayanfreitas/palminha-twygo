@@ -13,8 +13,7 @@ jobs:
         run: |
           echo "TESTE ENV - secrets.REACT_APP_FIREBASE_TYPE"
           echo ${{ secrets.REACT_APP_FIREBASE_TYPE }}
-          echo ${{ GITHUB_TOKEN }}
           echo ${{ github.repository }}
           echo ${{ env.OPEN }}
           echo ${{ vars.OPEN }}
-          echo ${{ OPEN }}
+          echo ${{ $OPEN }}
