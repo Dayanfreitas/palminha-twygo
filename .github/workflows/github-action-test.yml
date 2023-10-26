@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} started GitHub Actions 🚀
 on:
   push:
     branches:
-      - feat/teste-build-main
+      - feat/test-build-main
 jobs:
   build:
     runs-on: ubuntu-latest
